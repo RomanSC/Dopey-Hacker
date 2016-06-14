@@ -1,0 +1,9 @@
+# Dopey Hacker by Roman S. Collins
+
+# color scheme
+	gtk_color_scheme = "text_color:#FFFFFF\background_color:#00000A\mix_background_color:#0F1423\border_color:#050A16\focused_text_color:#86FF72\unfocused_text_color:#C3C3C3\inactive_text_color:#47CCFF\urgent_text_color:#DC5555\link_color:#7364FF"
+
+GtkWindow {
+    background-color: @background-color;
+    color: @text_color;
+}

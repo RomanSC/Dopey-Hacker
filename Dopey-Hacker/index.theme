@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Dopey-Hacker
+Comment=Dark derp.
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Dopey-Hacker
