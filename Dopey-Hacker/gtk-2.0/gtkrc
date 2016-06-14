@@ -9,7 +9,7 @@ style "murrine-default" {
     ythickness= 1;
 
     fg[NORMAL]= @text_color;
-    fg[PRELIGHT]= lighten (@focused_text_color, 0.7);
+    fg[PRELIGHT]= lighten (0.7, @focused_text_color);
     fg[SELECTED]= @focused_text_color;
     fg[ACTIVE]= @inactive_text_color;
     fg[INSENSITIVE]= @unfocused_text_color;
@@ -20,14 +20,14 @@ style "murrine-default" {
     bg[ACTIVE]= @background_color;
     bg[INSENSITIVE]= @background_color;
 
-    base[NORMAL]= (@background_color);
-    base[PRELIGHT]= lighten (@background_color);
-    base[SELECTED]= lighten (@background_color);
-    base[ACTIVE]= lighten (@background_color);
-    base[INSENSITIVE]= lighten (@background_color);
+    base[NORMAL]= lighten (0.5, @background_color);
+    base[PRELIGHT]= lighten (0.5, @background_color);
+    base[SELECTED]= lighten (0.5, @background_color);
+    base[ACTIVE]= lighten (0.5, @background_color);
+    base[INSENSITIVE]= lighten (0.5, @background_color);
 
     text[NORMAL]= @text_color;
-    text[PRELIGHT]= lighten (@focused_text_color, 0.7);
+    text[PRELIGHT]= lighten (0.7, @focused_text_color);
     text[SELECTED]= @focused_text_color;
     text[ACTIVE]= @inactive_text_color;
     text[INSENSITIVE]= @unfocused_text_color;
