@@ -20,11 +20,11 @@ style "murrine-default" {
     bg[ACTIVE]= @background_color;
     bg[INSENSITIVE]= @background_color;
 
-    base[NORMAL]= lighter (@background_color);
-    base[PRELIGHT]= lighter (@background_color);
-    base[SELECTED]= lighter (@background_color);
-    base[ACTIVE]= lighter (@background_color);
-    base[INSENSITIVE]= lighter (@background_color);
+    base[NORMAL]= (@background_color);
+    base[PRELIGHT]= lighten (@background_color);
+    base[SELECTED]= lighten (@background_color);
+    base[ACTIVE]= lighten (@background_color);
+    base[INSENSITIVE]= lighten (@background_color);
 
     text[NORMAL]= @text_color;
     text[PRELIGHT]= lighten (@focused_text_color, 0.7);
