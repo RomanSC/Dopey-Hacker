@@ -1,0 +1,55 @@
+# Dopey Hacker by Roman S. Collins
+
+# color scheme
+gtk_color_scheme = "text_color:#FFFFFF\background_color:#00000A\border_color:#050A16\focused_text_color:#86FF72\unfocused_text_color:#C3C3C3\inactive_text_color:#47CCFF\urgent_text_color:#DC5555\link_color:#7364FF"
+
+style "murrine-default" {
+
+    xthickness= 1;
+    ythickness= 1;
+
+    fg[NORMAL]= @text_color;
+    fg[PRELIGHT]= lighten (@focused_text_color, 0.7);
+    fg[SELECTED]= @focused_text_color;
+    fg[ACTIVE]= @inactive_text_color;
+    fg[INSENSITIVE]= @unfocused_text_color;
+
+    bg[NORMAL]= @background_color;
+    bg[PRELIGHT]= @background_color;
+    bg[SELECTED]= @background_color;
+    bg[ACTIVE]= @background_color;
+    bg[INSENSITIVE]= @background_color;
+
+    base[NORMAL]= lighter (@background_color);
+    base[PRELIGHT]= lighter (@background_color);
+    base[SELECTED]= lighter (@background_color);
+    base[ACTIVE]= lighter (@background_color);
+    base[INSENSITIVE]= lighter (@background_color);
+
+    text[NORMAL]= @text_color;
+    text[PRELIGHT]= lighten (@focused_text_color, 0.7);
+    text[SELECTED]= @focused_text_color;
+    text[ACTIVE]= @inactive_text_color;
+    text[INSENSITIVE]= @unfocused_text_color;
+
+    engine "murrine" {
+    }
+}
+
+style "murrine-wide" {
+    xthickness= 2;
+    ythickness= 2;
+
+}
+
+style "murrine-wider" {
+    xthickness= 3;
+    ythickness= 3;
+
+}
+
+style "murrine-thin" {
+    xthickness= 0;
+    ythickness= 0;
+
+}
