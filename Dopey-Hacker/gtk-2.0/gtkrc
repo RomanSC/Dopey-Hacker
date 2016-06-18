@@ -5,6 +5,93 @@ gtk_color_scheme = "text_color:#FFFFFF\background_color:#00000A\border_color:#05
 
 style "murrine-default" {
 
+    GtkArrow::arrow-scaling= 0.6
+
+    GtkButton::child-displacement-x = 0
+    GtkButton::child-displacement-y = 0
+
+    GtkButton::default-border = { 0, 0, 0, 0 }
+
+    GtkButtonBox::child-min-height = 26
+
+    GtkCheckButton::indicator-size = 16
+
+    # The following line hints to gecko (and possibly other appliations)
+    # that the entry should be drawn transparently on the canvas.
+    # Without this, gecko will fill in the background of the entry.
+    GtkEntry::honors-transparent-bg-hint = 1
+    GtkEntry::state-hint = 0
+
+    GtkExpander::expander-size = 16
+
+    GtkImage::x-ayatana-indicator-dynamic = 1
+
+    GtkMenu::horizontal-padding = 0
+    GtkMenu::vertical-padding = 0
+
+    GtkMenuBar::internal-padding = 0
+    GtkMenuBar::window-dragging = 1
+
+    GtkMenuItem::arrow-scaling= 0.5
+
+    GtkPaned::handle-size = 1
+
+    GtkProgressBar::min-horizontal-bar-height = 12
+    GtkProgressBar::min-vertical-bar-width = 12
+
+    GtkRange::trough-border = 0
+    GtkRange::slider-width = 12
+    GtkRange::stepper-size = 12
+    GtkRange::stepper_spacing = 0
+    GtkRange::trough-under-steppers = 1
+
+    GtkScale::slider-length = 16
+    GtkScale::slider-width = 16
+    GtkScale::trough-side-details = 1
+
+    GtkScrollbar::activate-slider = 1
+    GtkScrollbar::has-backward-stepper = 0
+    GtkScrollbar::has-forward-stepper = 0
+    GtkScrollbar::has-secondary-backward-stepper = 0
+    GtkScrollbar::has-secondary-forward-stepper = 0
+    GtkScrollbar::min-slider-length = 80
+    GtkScrollbar::slider-width = 12
+    GtkScrollbar::trough-border = 0
+
+    GtkScrolledWindow::scrollbar-spacing = 0
+    GtkScrolledWindow::scrollbars-within-bevel = 1
+
+    GtkSeparatorMenuItem::horizontal-padding = 0
+
+    GtkToolbar::internal-padding = 0
+
+    GtkTreeView::expander-size = 11
+    GtkTreeView::vertical-separator = 0
+
+    GtkWidget::focus-line-width = 1
+    # The following line prevents the Firefox tabs
+    # from jumping a few pixels when you create a new tab
+    GtkWidget::focus-padding = 0
+
+    GtkWidget::wide-separators = 1
+    GtkWidget::separator-width = 1
+    GtkWidget::separator-height = 1
+
+    GtkWindow::resize-grip-height = 0
+    GtkWindow::resize-grip-width = 0
+
+    WnckTasklist::fade-overlay-rect = 0
+
+    GnomeHRef::link_color = @inactive_text_color
+    GtkHTML::link-color = @inactive_text_color
+    GtkIMHtmlr::hyperlink-color = @inactive_text_color
+    GtkIMHtml::hyperlink-color = @inactive_text_color
+    GtkWidget::link-color = @inactive_text_color
+    GtkWidget::visited-link-color = @inactive_text_color
+
+    GtkToolbar::shadow-type = GTK_SHADOW_NONE # Makes toolbars flat and unified
+    GtkMenuBar::shadow-type = GTK_SHADOW_NONE # Makes menubars flat and unified
+
     xthickness= 1
     ythickness= 1
 
@@ -33,6 +120,33 @@ style "murrine-default" {
     text[INSENSITIVE]= @unfocused_text_color
 
     engine "murrine" {
+        animation = FALSE
+        arrowstyle = 1 # 0 = normal arrows, 1 = filled arrows
+        border_shades = { 1.0, 1.0 } # gradient to draw on border
+        colorize_scrollbar = FALSE
+        comboboxstyle = 0 # 0 = normal combobox, 1 = colorized combobox below arrow
+        contrast = 0.8 # overal contrast with borders
+        focusstyle = 1 # 0 = none, 1 = grey dotted, 2 = colored with fill, 3 = colored glow
+        glazestyle = 0 # 0 = flat highlight, 1 = curved highlight, 2 = concave, 3 = top curved highlight, 4 = beryl highlight
+        glowstyle = 0 # 0 = glow on top, 1 = glow on bottom, 2 = glow on top and bottom, 3 = glow on middle vertically, 4 = glow on middle horizontally, 5 = glow on all sides
+        glow_shade = 1.0 # amount of glow
+        gradient_shades = { 1.0, 1.0, 1.0, 1.0 } # gradient to draw on widgets
+        highlight_shade = 1.0 # amount of highlight
+        lightborder_shade = 1.0 # amount of inset light border
+        lightborderstyle = 1 # 0 = lightborder on top side, 1 = lightborder on all sides
+        listviewheaderstyle = 0 # 0 = flat, 1 = glassy, 2 = raised
+        listviewstyle = 0 # 0 = none, 1 = dotted, 2 = line
+        menubaritemstyle = 0 # 0 = menuitem look, 1 = button look
+        menubarstyle = 0 # 0 = flat, 1 = glassy, 2 = gradient, 3 = striped
+        menuitemstyle = 0 # 0 = flat, 1 = glassy, 2 = striped
+        menustyle = 0 # 0 = none, 1 = vertical striped
+        progressbarstyle = 0 # 0 = none, 1 = diagonal striped, 2 = vertical striped
+        reliefstyle = 0 # 0 = flat, 1 = inset, 2 = shadow, 3 = shadow with gradient, 4 = stronger shadow with gradient
+        roundness = 2 # roundness of widgets
+        scrollbarstyle = 0 # 0 = none, 1 = circles, 2 = handles, 3 = diagonal stripes, 4 = diagonal stripes and handles, 5 = horizontal stripes, 6 = horizontal stripes and handles
+        sliderstyle = 0 # 0 = none, 1 = handles
+        stepperstyle = 1 # 0 = standard, 1 = integrated stepper handles
+        toolbarstyle = 0 # 0 = flat, 1 = glassy, 2 = gradient
     }
 }
 
@@ -349,3 +463,64 @@ widget "*gdm-user-switch-menubar*" style "murrine-panel"
 
 widget "*Panel*MenuBar*" style "bold-panel-item"
 widget "*gimmie*" style "bold-panel-item"
+
+class "GtkWidget" style "murrine-default"
+
+class "GtkFrame" style "murrine-wide"
+class "MetaFrames" style "metacity-frame"
+class "GtkWindow" style "metacity-frame"
+
+class "GtkSeparator" style "murrine-wide"
+class "GtkCalendar" style "murrine-wide"
+
+class "GtkSpinButton" style "murrine-spinbutton"
+
+class "GtkScale" style "murrine-scale"
+class "GtkVScale" style "murrine-vscale"
+class "GtkHScale" style "murrine-hscale"
+class "GtkScrollbar" style "murrine-scrollbar"
+class "GtkVScrollbar" style "murrine-vscrollbar"
+class "GtkHScrollbar" style "murrine-hscrollbar"
+
+class "GtkRadio*" style "murrine-radiocheck"
+class "GtkCheck*" style "murrine-radiocheck"
+
+class "GtkEntry" style "murrine-entry"
+
+widget_class "*<GtkNotebook>" style "murrine-notebook"
+widget_class "*<GtkNotebook>*<GtkEventBox>" style "murrine-notebook-bg"
+widget_class "*<GtkNotebook>*<GtkDrawingArea>" style "murrine-notebook-bg"
+widget_class "*<GtkNotebook>*<GtkLayout>" style "murrine-notebook-bg"
+widget_class "*.GtkNotebook.*.GtkViewport" style "murrine-notebook"
+
+widget_class "*<GtkButton>" style "murrine-button"
+widget_class "*<GtkStatusbar>*" style "murrine-statusbar"
+widget_class "*<GtkProgress>" style "murrine-progressbar"
+widget_class "*<GtkProgressBar>" style "murrine-progressbar"
+
+widget_class "*<GtkComboBoxEntry>*" style "murrine-comboboxentry"
+widget_class "*<GtkCombo>*" style "murrine-comboboxentry"
+
+widget_class "*<GtkMenu>*" style "murrine-menu"
+widget_class "*<GtkMenuItem>*" style "murrine-menu-item"
+widget_class "*<GtkSeparatorMenuItem>*" style "murrine-separator-menu-item"
+widget_class "*Menu*.*Sepa*"  style "murrine-separator-menu-item"
+widget_class "*<GtkMenuBar>*" style "murrine-menubar"
+widget_class "*<GtkMenuBar>*<GtkMenuItem>*" style "murrine-menubaritem"
+
+widget_class "*GtkToolButton*" style "murrine-toolbutton"
+widget_class "*GtkToggleToolButton*" style "murrine-toolbutton"
+widget_class "*GtkMenuToolButton*" style "murrine-toolbutton"
+widget_class "*GtkToolbar*Button" style "murrine-toolbutton"
+
+widget_class "*.<GtkFrame>.<GtkLabel>" style "murrine-frame-title"
+
+widget_class "*.<GtkTreeView>*" style "murrine-treeview"
+widget_class "*.<GtkTreeView>.<GtkButton>" style "murrine-treeview-header"
+widget_class "*.<GtkCTree>.<GtkButton>" style "murrine-treeview-header"
+widget_class "*.<GtkList>.<GtkButton>" style "murrine-treeview-header"
+widget_class "*.<GtkCList>.<GtkButton>" style "murrine-treeview-header"
+
+widget "gtk-tooltip*" style "murrine-tooltips"
+
+widget_class "*<GtkScrolledWindow>*<OsScrollbar>" style "murrine-overlay-scrollbar"
