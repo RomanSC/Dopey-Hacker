@@ -199,15 +199,17 @@ style "murrine-menu" = "murrine-thin" {
 }
 
 style "murrine-menu-item" = "murrine-wider" {
-    bg[PRELIGHT] = @selected_bg_color
-    bg[SELECTED] = @selected_bg_color
-    bg[ACTIVE] = @selected_bg_color
+    bg[NORMAL]= @background_color
+    bg[PRELIGHT]= @background_color
+    bg[SELECTED]= @background_color
+    bg[ACTIVE]= @background_color
+    bg[INSENSITIVE]= @background_color
 
-    fg[NORMAL] = @menu_fg_color # Fix for XFCE menu text
-    fg[PRELIGHT] = @selected_fg_color
-    fg[SELECTED] = @selected_fg_color
-    fg[ACTIVE] = @selected_fg_color
-    fg[INSENSITIVE] = mix (0.5, @menu_bg_color, @menu_fg_color)
+    fg[NORMAL]= @text_color
+    fg[PRELIGHT]= lighten (0.7, @focused_text_color)
+    fg[SELECTED]= @focused_text_color
+    fg[ACTIVE]= @inactive_text_color
+    fg[INSENSITIVE]= @unfocused_text_color
 
     engine "murrine" {
         textstyle = 0
@@ -218,17 +220,17 @@ style "murrine-menu-item" = "murrine-wider" {
 style "murrine-separator-menu-item" = "murrine-thin" { }
 
 style "murrine-menubar" {
-    bg[NORMAL] = @selected_bg_color
-    bg[PRELIGHT] =  mix (0.21, @menubar_fg_color, @menubar_bg_color)
-    bg[SELECTED] =  mix (0.21, @menubar_fg_color, @menubar_bg_color)
-    bg[ACTIVE] = shade (0.9, @menubar_bg_color)
-    bg[INSENSITIVE] = @menubar_bg_color
+    bg[NORMAL]= @background_color
+    bg[PRELIGHT]= @background_color
+    bg[SELECTED]= @background_color
+    bg[ACTIVE]= @background_color
+    bg[INSENSITIVE]= @background_color
 
-    fg[NORMAL] = @menubar_fg_color
-    fg[PRELIGHT] = shade (1.08, @menubar_fg_color)
-    fg[SELECTED] = shade (1.08, @menubar_fg_color)
-    fg[ACTIVE] = @menubar_fg_color
-    fg[INSENSITIVE] = mix (0.5, @menubar_bg_color, @menubar_fg_color)
+    fg[NORMAL]= @text_color
+    fg[PRELIGHT]= lighten (0.7, @focused_text_color)
+    fg[SELECTED]= @focused_text_color
+    fg[ACTIVE]= @inactive_text_color
+    fg[INSENSITIVE]= @unfocused_text_color
 
     engine "murrine" {
         roundness = 0
@@ -236,17 +238,17 @@ style "murrine-menubar" {
 }
 
 style "murrine-menubaritem" {
-    bg[NORMAL] = @menubar_bg_color
-    bg[PRELIGHT] =  mix (0.21, @menubar_fg_color, @menubar_bg_color)
-    bg[SELECTED] =  mix (0.21, @menubar_fg_color, @menubar_bg_color)
-    bg[ACTIVE] = shade (0.9, @menubar_bg_color)
-    bg[INSENSITIVE] = @menubar_bg_color
+    bg[NORMAL]= @border_color
+    bg[PRELIGHT]= @border_color
+    bg[SELECTED]= @border_color
+    bg[ACTIVE]= @border_color
+    bg[INSENSITIVE]= @border_color
 
-    fg[NORMAL] = @menubar_fg_color
-    fg[PRELIGHT] = shade (1.08, @menubar_fg_color)
-    fg[SELECTED] = shade (1.08, @menubar_fg_color)
-    fg[ACTIVE] = @menubar_fg_color
-    fg[INSENSITIVE] = mix (0.5, @menubar_bg_color, @menubar_fg_color)
+    fg[NORMAL]= @text_color
+    fg[PRELIGHT]= lighten (0.7, @focused_text_color)
+    fg[SELECTED]= @focused_text_color
+    fg[ACTIVE]= @inactive_text_color
+    fg[INSENSITIVE]= @unfocused_text_color
 
     engine "murrine" {
         roundness = 0
@@ -256,34 +258,34 @@ style "murrine-menubaritem" {
 # Toolbars
 
 style "murrine-toolbar" = "murrine-thin" {
-    bg[NORMAL] = @bg_color
-    bg[PRELIGHT] = shade (1.02, @bg_color)
-    bg[SELECTED] = @selected_bg_color
-    bg[ACTIVE] = shade (0.9, @bg_color)
-    bg[INSENSITIVE] = @bg_color
+    bg[NORMAL]= @border_color
+    bg[PRELIGHT]= @border_color
+    bg[SELECTED]= @border_color
+    bg[ACTIVE]= @border_color
+    bg[INSENSITIVE]= @border_color
 
-    fg[NORMAL] = @fg_color
-    fg[PRELIGHT] = @fg_color
-    fg[SELECTED] = @selected_fg_color
-    fg[ACTIVE] = @fg_color
-    fg[INSENSITIVE] = mix (0.5, @bg_color, @fg_color)
+    fg[NORMAL]= @text_color
+    fg[PRELIGHT]= lighten (0.7, @focused_text_color)
+    fg[SELECTED]= @focused_text_color
+    fg[ACTIVE]= @inactive_text_color
+    fg[INSENSITIVE]= @unfocused_text_color
 
     engine "murrine" {
     }
 }
 
 style "murrine-toolbutton" = "murrine-button" {
-    bg[NORMAL] = shade (1.08, @bg_color)
-    bg[PRELIGHT] = shade (1.10, @bg_color)
-    bg[SELECTED] = @selected_bg_color
-    bg[ACTIVE] = shade (0.95, @bg_color)
-    bg[INSENSITIVE] = shade (0.85, @bg_color)
+    bg[NORMAL]= @border_color
+    bg[PRELIGHT]= @border_color
+    bg[SELECTED]= @border_color
+    bg[ACTIVE]= @border_color
+    bg[INSENSITIVE]= @border_color
 
-    fg[NORMAL] = @fg_color
-    fg[PRELIGHT] = @fg_color
-    fg[SELECTED] = @selected_fg_color
-    fg[ACTIVE] = @fg_color
-    fg[INSENSITIVE] = mix (0.5, @bg_color, @fg_color)
+    fg[NORMAL]= @text_color
+    fg[PRELIGHT]= lighten (0.7, @focused_text_color)
+    fg[SELECTED]= @focused_text_color
+    fg[ACTIVE]= @inactive_text_color
+    fg[INSENSITIVE]= @unfocused_text_color
 
     engine "murrine" {
     }
@@ -298,29 +300,29 @@ widget_class "*Toolbar*.*Separator*" style "murrine-toolbar"
 style "murrine-panel" = "murrine-thin" {
     xthickness = 2
 
-    bg[NORMAL] = @panel_bg_color
-    bg[PRELIGHT] =  mix (0.21, @panel_fg_color, @panel_bg_color)
-    bg[SELECTED] =  mix (0.21, @panel_fg_color, @panel_bg_color)
-    bg[ACTIVE] = shade (0.8, @panel_bg_color)
-    bg[INSENSITIVE] = @panel_bg_color
+    bg[NORMAL]= @border_color
+    bg[PRELIGHT]= @border_color
+    bg[SELECTED]= @border_color
+    bg[ACTIVE]= @border_color
+    bg[INSENSITIVE]= @border_color
 
-    fg[NORMAL] = @panel_fg_color
-    fg[PRELIGHT] = shade (1.08, @panel_fg_color)
-    fg[SELECTED] = shade (1.08, @panel_fg_color)
-    fg[ACTIVE] = @panel_fg_color
-    fg[INSENSITIVE] = mix (0.5, @panel_bg_color, @panel_fg_color)
+    fg[NORMAL]= @text_color
+    fg[PRELIGHT]= lighten (0.7, @focused_text_color)
+    fg[SELECTED]= @focused_text_color
+    fg[ACTIVE]= @inactive_text_color
+    fg[INSENSITIVE]= @unfocused_text_color
 
-    base[NORMAL] = @panel_bg_color
-    base[PRELIGHT] =  mix (0.21, @panel_fg_color, @panel_bg_color)
-    base[SELECTED] =  mix (0.21, @panel_fg_color, @panel_bg_color)
-    base[ACTIVE] = shade (0.9, @panel_bg_color)
-    base[INSENSITIVE] = @panel_bg_color
+    base[NORMAL] = @border_color
+    base[PRELIGHT] =  @border_color
+    base[SELECTED] =  @border_color
+    base[ACTIVE] = @border_color
+    base[INSENSITIVE] = @border_color
 
-    text[NORMAL] = @panel_fg_color
-    text[PRELIGHT] = shade (1.08, @panel_fg_color)
-    text[SELECTED] = shade (1.08, @panel_fg_color)
-    text[ACTIVE] = @panel_fg_color
-    text[INSENSITIVE] = mix (0.5, @panel_bg_color, @panel_fg_color)
+    text[NORMAL] = @text_color
+    text[PRELIGHT] = lighten (0.7, @focused_text_color)
+    text[SELECTED] = @focused_text_color
+    text[ACTIVE] = @inactive_text_color
+    text[INSENSITIVE] = @unfocused_text_color
 
     engine "murrine" {
         roundness = 0
@@ -347,7 +349,3 @@ widget "*gdm-user-switch-menubar*" style "murrine-panel"
 
 widget "*Panel*MenuBar*" style "bold-panel-item"
 widget "*gimmie*" style "bold-panel-item"
-
-# widget_class "*Mail*" style "murrine-panel" # Disabled to fix Evolution bug
-# class "*Panel*" style "murrine-panel" # Disabled to fix bug
-
