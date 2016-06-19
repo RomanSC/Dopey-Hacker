@@ -1,8 +1,9 @@
 [Desktop Entry]
 Type=X-GNOME-Metatheme
-Name=Dopey-Hacker
-Comment=Dark derp.
+Name=Dopey Hacker
+Comment=Flat, dopey, hacky, derp.
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
-GtkTheme=Dopey-Hacker
+GtkTheme=Dopey Hacker
+ButtonLayout=:minimize,maximize,close
